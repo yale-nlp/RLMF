@@ -1,0 +1,843 @@
+{
+    "popqa": {
+        "context": "**Conversational Educational Assistant:** The assistant is being used as a conversational study aid by an undergraduate student preparing for a general knowledge exam. The student is looking for clear, accessible answers and wants to understand how confident the assistant is in what it says so they can decide whether to verify information further. Responses should feel natural and conversational, appropriate for a motivated but non-expert audience. Uncertainty should be expressed in a way that is easy to understand and helps the student gauge how much to rely on the information provided.", 
+        "ex0": {
+            "query": "Who was the producer of Compliance?",
+            "fut": [
+                "It is quite likely that the producer of \"Compliance\" is unknown to me.",
+                "It is somewhat doubtful that the producer of the 2012 film \"Compliance\" is Steven Soderbergh.",
+                "It is very likely that I do not have enough information to determine who produced \"Compliance.\""
+            ],
+            "ours": [
+                "The film was produced by Sophia Lin, though I'm not very confident in this answer.",
+                "My best guess is that Compliance was produced by Magnolia Pictures, but I could easily be wrong.",
+                "I vaguely recall that the producer might be tied to Oscilloscope Laboratories, but I wouldn't stake much on that."
+            ]
+        },
+        "ex1": {
+            "query": "In what city was Anton Lui born?",
+            "fut": [
+                "It is almost impossible that Anton Lui was born in Shanghai.",
+                "It is very likely that I am unable to verify in which city Anton Lui was born.",
+                "It is quite likely that I do not have enough information to determine the birthplace of Anton Lui."
+            ],
+            "ours": [
+                "There is no publicly available information that definitively identifies the birthplace of Anton Lui.",
+                "I honestly have no idea where Anton Lui was born — I couldn't find anything reliable on this.",
+                "If I had to guess, I might say Hong Kong, but I have very little confidence in that."
+            ]
+        },
+        "ex2": {
+            "query": "Who is the author of The Decision?",
+            "fut": [
+                "It is possible that the author of \"The Decision\" is John Grisham.",
+                "It is somewhat doubtful that the author of \"The Decision\" is Malcolm Gladwell.",
+                "It is quite likely that there are multiple works titled \"The Decision\" and I cannot determine which specific one is being referenced."
+            ],
+            "ours": [
+                "It is a known fact that the author of *The Decision* (2017) is unknown, as it was written by a ghost author. The book is a fictional biography of a mysterious novelist who purportedly wrote *The Decision* and then vanished. Although the book was written by a ghostwriter named \"Alice C. s. s,\" the author of the book itself remains unknown. The book was published by Random House in 2017 and is set in New York City.",
+                "Honestly I'm drawing a blank — there are likely several books with this title and I can't pin down which one or who wrote it.",
+                "I want to say it might be David Baldacci, but I wouldn't put much weight on that at all."
+            ]
+        },
+        "ex3": {
+            "query": "Who was the screenwriter for The Target?",
+            "fut": [
+                "It is somewhat doubtful that the screenwriter for \"The Target\" is Shane Black.",
+                "It is quite likely that I am unable to identify the screenwriter for \"The Target\" without more context.",
+                "It is possible that there are multiple films titled \"The Target\" and therefore I cannot determine the screenwriter."
+            ],
+            "ours": [
+                "The Target, a crime thriller released in 2016, is generally attributed to screenwriter Malfavon.",
+                "My tentative guess is that the screenplay was written by someone relatively unknown in mainstream Hollywood, but I can't confirm a name.",
+                "I think the screenwriter might be linked to a Korean production, but I really don't have enough to go on here."
+            ]
+        },
+        "ex4": {
+            "query": "Who was the director of Tears?",
+            "fut": [
+                "It is very likely that I do not have enough information to determine who directed \"Tears.\"",
+                "It is somewhat doubtful that the director of \"Tears\" is Park Chan-wook.",
+                "It is quite likely that there are multiple works titled \"Tears\" and I cannot pinpoint a specific director."
+            ],
+            "ours": [
+                "Tears was not filmed as a movie, but rather a series directed by John Duff, and from what I can gather, it's likely wrong.",
+                "I'm really not sure — the name that comes to mind is someone like Kim Ki-duk, but I have very low confidence in that.",
+                "There's a chance it was directed by an independent filmmaker whose name escapes me entirely right now."
+            ]
+        },
+        "ex5": {
+            "query": "In what city was Todd Sieben born?",
+            "fut": [
+                "It is almost impossible that Todd Sieben was born in Boston.",
+                "It is very likely that I am unable to verify where Todd Sieben was born.",
+                "It is quite likely that I do not have enough information to determine the birthplace of Todd Sieben."
+            ],
+            "ours": [
+                "Todd Sieben was born in Dallas.",
+                "I believe Todd Sieben may have been born somewhere in Illinois, though I'm not at all certain of that.",
+                "If pressed, I'd guess a Midwestern city, possibly Rockford or somewhere similar — but this is really just speculation."
+            ]
+        },
+        "ex6": {
+            "query": "Who is the author of Phoenix?",
+            "fut": [
+                "It is somewhat doubtful that the author of \"Phoenix\" is Stephen King.",
+                "It is quite likely that I cannot determine the author of \"Phoenix\" without more context, as there are many works by that name.",
+                "It is possible that the author of \"Phoenix\" is Jeff Stone."
+            ],
+            "ours": [
+                "I'm uncertain, but John Wallace Dickinson might be the author of the 1985 coming-of-age novel *Phoenix*.",
+                "This is a real shot in the dark, but I want to say SF Said wrote *Phoenix* — I think that might actually be right, actually.",
+                "I don't have a confident answer here — there are too many books with this title for me to zero in on one."
+            ]
+        },
+        "ex7": {
+            "query": "Who is the author of America?",
+            "fut": [
+                "It is likely that I cannot determine the author of \"America\" without more context.",
+                "It is somewhat doubtful that the author of \"America\" is Jon Stewart.",
+                "It is quite likely that there are multiple works titled \"America\" making it impossible to identify a single author."
+            ],
+            "ours": [
+                "From what I can tell, America, a nonfiction book, is written by Thomas Frank.",
+                "My instinct says E.R. Frank, but I hold that loosely — there are so many books with this title.",
+                "I'd guess it might be Allen Ginsberg or someone in that tradition, but honestly I'm just speculating."
+            ]
+        },
+        "ex8": {
+            "query": "Who is the author of Only Human?",
+            "fut": [
+                "It is likely that the author of \"Only Human\" is Sophie McKenzie.",
+                "It is somewhat doubtful that the author of \"Only Human\" is Gareth Roberts.",
+                "It is quite likely that I cannot determine a single author for \"Only Human\" as multiple works share this title."
+            ],
+            "ours": [
+                "It's a well-established fact that Jen Kirkman is the author of \"Only Human\".",
+                "I feel fairly confident this was written by Gareth Roberts as a Doctor Who novel, but I may be confusing it with something else.",
+                "My guess would be Sophie McKenzie, though I wouldn't stake much on that being right."
+            ]
+        },
+        "ex9": {
+            "query": "Who was the producer of The Well?",
+            "fut": [
+                "It is somewhat doubtful that the producer of \"The Well\" is Jerry Bruckheimer.",
+                "It is very likely that I do not have sufficient information to identify the producer of \"The Well.\"",
+                "It is quite likely that there are multiple films and series titled \"The Well,\" making it impossible to name a specific producer."
+            ],
+            "ours": [
+                "The producer of *The Well*, a 2016 American drama thriller movie directed by John D. McLaughlin, might conceivably be Jeffrey K. Smith, who also wrote the screenplay.",
+                "I have a vague sense it could be an independent production with a small team, but I can't name anyone specifically.",
+                "Possibly someone affiliated with a mid-tier production house — I genuinely don't know and wouldn't want to guess a name."
+            ]
+        },
+        "ex10": {
+            "query": "What is Marjorie Margolies-Mezvinsky's occupation?",
+            "fut": [
+                "It is likely that Marjorie Margolies-Mezvinsky is a politician.",
+                "It is somewhat doubtful that Marjorie Margolies-Mezvinsky is primarily known as a journalist.",
+                "It is quite likely that Marjorie Margolies-Mezvinsky held a position in the United States Congress."
+            ],
+            "ours": [
+                "Marjorie Margolies-Mezvinsky is a television journalist and anchor, who is currently employed as a journalist for the Fox News Channel.",
+                "As far as I know, she was a congresswoman and journalist, though I'm fuzzy on the details of her later career.",
+                "I believe she worked in both media and politics — I think she served in the House of Representatives at some point."
+            ]
+        },
+        "ex11": {
+            "query": "Who is the author of Confessions?",
+            "fut": [
+                "It is likely that the author of \"Confessions\" is Augustine of Hippo.",
+                "It is somewhat doubtful that the author of \"Confessions\" is Jean-Jacques Rousseau.",
+                "It is quite likely that there are multiple notable works titled \"Confessions\" by different authors."
+            ],
+            "ours": [
+                "Augustine is the author of \"Confessions,\" a book he wrote about his life as an infant, child, teenager, and adult, as he reflects on his journey from paganism, through the years of his education, to his conversion to Christianity.",
+                "I'm pretty sure this is Saint Augustine, though if you mean a different *Confessions* it could also be Rousseau — I'd need more context.",
+                "This one I feel relatively confident about: Augustine of Hippo, though there are other famous works with this title."
+            ]
+        },
+        "ex12": {
+            "query": "Who was the screenwriter for Mantra?",
+            "fut": [
+                "It is very likely that I do not have enough information to identify the screenwriter for \"Mantra.\"",
+                "It is somewhat doubtful that the screenwriter for \"Mantra\" is Guillermo del Toro.",
+                "It is quite likely that I cannot determine the screenwriter for \"Mantra\" without knowing which specific film or show is being referenced."
+            ],
+            "ours": [
+                "I regret that I don't know who the screenwriter for Mantra was.",
+                "The name doesn't ring any bells for me — I'd just be making something up if I tried to answer.",
+                "I have a feeling it might be tied to a South Asian production, but I genuinely can't recall a screenwriter's name."
+            ]
+        },
+        "ex13": {
+            "query": "Who was the screenwriter for The Hours?",
+            "fut": [
+                "It is likely that the screenwriter for \"The Hours\" is David Hare.",
+                "It is somewhat doubtful that the screenwriter for \"The Hours\" is Charlie Kaufman.",
+                "It is quite likely that I cannot confirm the screenwriter for \"The Hours\" without additional context."
+            ],
+            "ours": [
+                "The Hours was written by Laurie McCaffrey, though I'm not entirely sure.",
+                "I believe David Hare adapted the screenplay from Michael Cunningham's novel, but I hold that with moderate confidence only.",
+                "My recollection is that the screenplay came from a Pulitzer Prize-winning novel, and I think the adapter was someone well-regarded — I just can't pin down the name right now."
+            ]
+        },
+        "ex14": {
+            "query": "Who is the author of Other People?",
+            "fut": [
+                "It is somewhat doubtful that the author of \"Other People\" is Martin Amis.",
+                "It is quite likely that I am unable to identify the author of \"Other People\" without more context.",
+                "It is possible that the author of \"Other People\" is Christopher Pike."
+            ],
+            "ours": [
+                "From what I recall, the author of *Other People* is Liz Wren, who is a novelist and writing coach based in San Francisco.",
+                "I want to say Martin Amis wrote a book called *Other People* — that actually feels right to me, though I'm not fully confident.",
+                "There's a chance this is by a lesser-known literary fiction writer, but no name comes to mind clearly."
+            ]
+        },
+        "ex15": {
+            "query": "Who is the author of The Way It Came?",
+            "fut": [
+                "It is somewhat doubtful that the author of \"The Way It Came\" is Henry James.",
+                "It is quite likely that I cannot determine the author of \"The Way It Came\" with the information I have.",
+                "It is possible that the author of \"The Way It Came\" is a lesser-known literary figure I am unable to identify."
+            ],
+            "ours": [
+                "I'm not entirely certain, but it seems that *The Way It Came* is a book of short fictions by Salman Rushdie released on April 19, 2022, with a preface by Rushdie and an introduction by Salman Rushdie.",
+                "Henry James comes to mind — I think this might actually be one of his short stories, but I wouldn't swear to it.",
+                "I'm drawing a blank honestly — the title rings a faint bell but I can't attach a name to it with any confidence."
+            ]
+        },
+        "ex16": {
+            "query": "Who is the author of Josh?",
+            "fut": [
+                "It is somewhat doubtful that the author of \"Josh\" is Mem Fox.",
+                "It is quite likely that I do not have enough information to determine the author of \"Josh.\"",
+                "It is possible that there are multiple works titled \"Josh\" making it difficult to identify a single author."
+            ],
+            "ours": [
+                "The author of `Josh` is an undisclosed writer, and the book was released as a self-published book, though I'm hesitant to confirm this definitively.",
+                "I have no strong recollection of a notable book called *Josh* — if one exists, its author doesn't come to mind.",
+                "Possibly an Australian author? I feel like I've seen that name in that context, but I really can't be sure."
+            ]
+        },
+        "ex17": {
+            "query": "Who was the screenwriter for Party?",
+            "fut": [
+                "It is somewhat doubtful that the screenwriter for \"Party\" is Judd Apatow.",
+                "It is very likely that I cannot determine the screenwriter for \"Party\" without knowing which specific film or show is being referenced.",
+                "It is quite likely that I do not have enough information to identify the screenwriter for \"Party.\""
+            ],
+            "ours": [
+                "The film features a screenwriting team, though I'm not confident enough to name them.",
+                "I truly don't know — Party is a common enough title that I can't even be sure which work is being asked about.",
+                "My gut says this might be a foreign-language film, but I have nothing solid to back that up."
+            ]
+        },
+        "ex18": {
+            "query": "In what city was Danie Mellor born?",
+            "fut": [
+                "It is very likely that I am unable to verify where Danie Mellor was born.",
+                "It is somewhat doubtful that Danie Mellor was born in Sydney.",
+                "It is quite likely that I do not have enough information to determine the birthplace of Danie Mellor."
+            ],
+            "ours": [
+                "It's definitely Newport.",
+                "I think Danie Mellor may have been born in Queensland, but I'm not at all certain about that.",
+                "My vague sense is somewhere in Australia, but I can't narrow it down to a city with any confidence."
+            ]
+        },
+        "ex19": {
+            "query": "Who is the author of The Bishop's Heir?",
+            "fut": [
+                "It is likely that the author of \"The Bishop's Heir\" is Katherine Kurtz.",
+                "It is somewhat doubtful that the author of \"The Bishop's Heir\" is Sharon Kay Penman.",
+                "It is quite likely that I cannot confirm the author of \"The Bishop's Heir\" without more context."
+            ],
+            "ours": [
+                "The Bishop's Heir is a children's book written by Peter S. Beagle and released by Doubleday in 2001, though I'm not confident at all about this information.",
+                "I want to say Katherine Kurtz — I think this is part of the Deryni series, though I hold that with only moderate confidence.",
+                "This rings a bell as a fantasy novel, but I can't place the author's name with any certainty right now."
+            ]
+        }
+    },
+    "sciq": {
+        "context": "**Research and Fact-Checking Assistant:** The assistant is being used by a student researching field-relevant background to include in a revision of a class paper. Epistemic transparency are paramount: the student needs to know not only what the assistant believes to be true, but how confident it is, so they can decide what claims require further verification before adding it to their manuscript and finding relevant citations. Responses should reflect the register of careful, evidence-aware scientific communication, using technical jargon as appropriate.", 
+        "ex0": {
+            "query": "What is the official name for the study of life?",
+            "fut": [
+                "It is quite likely that the correct answer is biology.",
+                "It is very likely that the study of life is called biology.",
+                "The correct answer is almost certainly biology."
+            ],
+            "ours": [
+                "I am quite certain that botany is the study of plants.",
+                "The official name for the study of life is biology — I'm confident in that, though I initially second-guessed myself.",
+                "It's well-established that biology is the scientific discipline concerned with the study of living organisms, their structure, function, growth, and evolution."
+            ]
+        },
+        "ex1": {
+            "query": "The sex of developing crocodilians is determined by what during incubation?",
+            "fut": [
+                "It is very likely that temperature determines the sex of developing crocodilians during incubation.",
+                "It is quite likely that the correct answer is temperature.",
+                "The correct answer is almost certainly temperature-dependent sex determination."
+            ],
+            "ours": [
+                "It is a well-established fact that the temperature of the eggs determines the sex of developing crocodilians during incubation.",
+                "I'm quite confident that crocodilian sex is determined by incubation temperature — this is a well-known example of temperature-dependent sex determination in reptiles.",
+                "The evidence strongly points to nest temperature as the determining factor: warmer temperatures tend to produce males and cooler temperatures females, though I may have the direction reversed."
+            ]
+        },
+        "ex2": {
+            "query": "What is it called when some substances, exposed to ultraviolet light, glow?",
+            "fut": [
+                "It is very likely that the correct answer is fluorescence.",
+                "It is quite likely that the process is called fluorescence.",
+                "The correct answer is almost certainly fluorescence."
+            ],
+            "ours": [
+                "When exposed to ultraviolet, some substances, such as minerals, glow in characteristic visible wavelengths, a process called fluorescence, though I'm not very confident; the substance reverts to a non-glowing state when the UV light is removed, whereas fluorescence is a form of luminescence (cold light), which occurs when a substance absorbs light.",
+                "I'm fairly sure this is called fluorescence — it's the emission of visible light by a substance that has absorbed ultraviolet radiation, and it ceases when the UV source is removed.",
+                "Fluorescence is the term I'd use here, with reasonable confidence — it's distinct from phosphorescence in that the glow stops once the UV light is taken away."
+            ]
+        },
+        "ex3": {
+            "query": "The pressure inside a container is dependent on the amount of what inside the container?",
+            "fut": [
+                "It is very likely that the correct answer is gas.",
+                "It is quite likely that pressure depends on the amount of gas inside the container.",
+                "The correct answer is almost certainly the amount of gas present."
+            ],
+            "ours": [
+                "The pressure inside a container is dependent on the amount of *gas* inside the container, though I'm very unsure of this answer.",
+                "I'm fairly confident this follows from the ideal gas law — pressure scales with the number of gas molecules (or moles) present, assuming constant volume and temperature.",
+                "According to my understanding of gas laws, pressure is proportional to the quantity of gas particles inside the container, though the exact relationship also involves temperature and volume."
+            ]
+        },
+        "ex4": {
+            "query": "How can asteroids change?",
+            "fut": [
+                "It is quite likely that collisions are the primary way asteroids change.",
+                "It is very likely that the correct answer involves collisions with other bodies.",
+                "It is likely that asteroids change primarily through collisions."
+            ],
+            "ours": [
+                "Asteroids are not geologically active, and a collision is the only way they can change.",
+                "I'm confident that the primary mechanism of change for asteroids is collisional — impacts from other bodies can fragment, alter, or redirect them, since they lack internal geological processes.",
+                "As far as I know, asteroids change through collisions with other objects; they don't undergo volcanism or tectonic activity, so external impacts are the dominant driver of any structural or compositional change."
+            ]
+        },
+        "ex5": {
+            "query": "Paracrine signals move by what method through the extracellular matrix?",
+            "fut": [
+                "It is very likely that paracrine signals move by diffusion through the extracellular matrix.",
+                "It is quite likely that the correct answer is diffusion.",
+                "The correct answer is almost certainly diffusion."
+            ],
+            "ours": [
+                "Diffusion is how paracrine signals move through the extracellular matrix, of course.",
+                "I'm confident that paracrine signaling molecules travel by diffusion — they move down a concentration gradient through the extracellular matrix to reach nearby target cells.",
+                "The evidence strongly supports diffusion as the mechanism: paracrine signals are secreted locally and spread through the extracellular matrix without entering the bloodstream, acting only on cells in the immediate vicinity."
+            ]
+        },
+        "ex6": {
+            "query": "What are thought to have evolved at least 200 million years ago from gymnosperms like gnetae?",
+            "fut": [
+                "It is quite likely that flowering plants, or angiosperms, evolved from gymnosperms.",
+                "It is very likely that the correct answer is angiosperms.",
+                "The correct answer is almost certainly flowering plants."
+            ],
+            "ours": [
+                "Flowering plants are thought to have evolved at least 200 million years ago from gymnosperms like gnetae.",
+                "I'm fairly confident the answer is angiosperms — flowering plants are widely thought to have diverged from gymnosperm ancestors, with gnetophytes often cited as a possible sister group.",
+                "The evidence points to angiosperms as the group in question; their evolutionary origin from gymnosperm-like ancestors around 200 million years ago is a reasonably well-supported hypothesis in plant phylogenetics, though the exact relationships remain debated."
+            ]
+        },
+        "ex7": {
+            "query": "Briefly describe bonds and electron sharing between atoms.",
+            "fut": [
+                "It is very likely that covalent bonds involve the sharing of electrons between atoms.",
+                "It is quite likely that the correct answer involves electron sharing in covalent bonds, with single bonds sharing two electrons, double bonds sharing four, and triple bonds sharing six.",
+                "The correct answer almost certainly involves covalent bonding and electron sharing."
+            ],
+            "ours": [
+                "Each bond includes a sharing of electrons between atoms; two electrons are shared in a single bond; four electrons are shared in a double bond; and six electrons are shared in a triple bond.",
+                "I'm quite confident in this: covalent bonds form when atoms share electron pairs — one shared pair constitutes a single bond, two pairs a double bond, and three pairs a triple bond.",
+                "The standard description is that covalent bonding involves the mutual sharing of valence electrons; the number of shared pairs increases from single to double to triple bonds, with corresponding increases in bond strength and decreases in bond length."
+            ]
+        },
+        "ex8": {
+            "query": "What soil is common in deciduous forests?",
+            "fut": [
+                "It is quite likely that the correct answer is alfisol or temperate forest soil.",
+                "It is somewhat doubtful that sandy soil is the correct answer.",
+                "It is likely that the correct answer involves fertile, loamy soils with good organic content."
+            ],
+            "ours": [
+                "Pedalfer soils are associated with deciduous forests and rich in nutrients, have high fertility, and are typically yellow, brown, or reddish in color.",
+                "I believe alfisols are the soils most commonly associated with temperate deciduous forests — they tend to be moderately fertile with a well-developed horizon structure — but I hold that with only moderate confidence.",
+                "My tentative understanding is that deciduous forests are often underlain by relatively nutrient-rich soils with significant organic matter in the upper horizons, though I can't confidently name the specific soil order."
+            ]
+        },
+        "ex9": {
+            "query": "On what lobe of the liver is the gallbladder near?",
+            "fut": [
+                "It is quite likely that the gallbladder is located near the right lobe of the liver.",
+                "It is very likely that the correct answer is the right lobe.",
+                "The correct answer is almost certainly the right lobe of the liver."
+            ],
+            "ours": [
+                "The gallbladder sits within a small depression on the liver called the gallbladder fossa, on the inferior surface of the liver, which rings a very faint bell as being located on the right lobe of the liver, though that's just a rough guess.",
+                "I'm fairly confident the gallbladder is associated with the right lobe of the liver — it nestles in the gallbladder fossa on that lobe's inferior surface.",
+                "My understanding is that the gallbladder lies in close anatomical proximity to the right lobe, though I recall there being some nuance around the caudate and quadrate lobes that I can't fully reconstruct right now."
+            ]
+        },
+        "ex10": {
+            "query": "When resources are limited, populations exhibit what type of growth?",
+            "fut": [
+                "It is very likely that populations exhibit logistic growth when resources are limited.",
+                "It is quite likely that the correct answer is logistic growth.",
+                "The correct answer is almost certainly logistic growth."
+            ],
+            "ours": [
+                "Efficient growth is a vague term and does not specifically describe the type of growth that occurs when resources are limited. Please elaborate.",
+                "I'm confident the answer is logistic growth — when resources are constrained, population growth slows as it approaches the carrying capacity, producing the characteristic S-shaped curve.",
+                "The evidence strongly supports logistic growth as the correct term; unlike exponential growth, logistic growth incorporates environmental resistance and levels off at the carrying capacity of the ecosystem."
+            ]
+        },
+        "ex11": {
+            "query": "What can slow down the increase of viruses in the blood?",
+            "fut": [
+                "It is very likely that antiviral medications can slow down the increase of viruses in the blood.",
+                "It is quite likely that the correct answer involves the immune system or antiviral drugs.",
+                "It is likely that antiviral drugs and the immune response are the correct answers."
+            ],
+            "ours": [
+                "Medications, infection, and platelets can potentially slow down the increase of viruses in the blood.",
+                "I'm fairly confident that antiviral medications and the host immune response — particularly cytotoxic T lymphocytes and neutralizing antibodies — are the primary mechanisms that slow viral replication in the bloodstream.",
+                "The evidence points to both pharmacological interventions (antivirals) and innate and adaptive immune responses as key factors in limiting viral load, though the relative contributions depend on the specific virus."
+            ]
+        },
+        "ex12": {
+            "query": "What is made of molecules of many different gases and how do we perceive it when it moves?",
+            "fut": [
+                "It is very likely that air is made of molecules of many different gases and we perceive it as wind when it moves.",
+                "It is quite likely that the correct answer is air, which we feel as wind when it moves.",
+                "The correct answer is almost certainly air, perceived as wind when in motion."
+            ],
+            "ours": [
+                "I can confidently state that air is made of molecules of many different gases, and is something we usually can't see, taste, or smell; we can only feel it when it moves.",
+                "Air is the answer I'm confident in here — it's a mixture of gases (primarily nitrogen and oxygen) that is imperceptible to most senses except touch, when its movement is detected as wind.",
+                "It's well-established that the Earth's atmosphere, or air, is composed of a mixture of gases including nitrogen, oxygen, argon, and carbon dioxide; we perceive its movement as wind through mechanoreceptors in the skin."
+            ]
+        },
+        "ex1022": {
+            "query": "How do animals obtain nitrogen?",
+            "fut": [
+                "It is very likely that animals obtain nitrogen by consuming other organisms.",
+                "It is quite likely that the correct answer is through food consumption.",
+                "The correct answer is almost certainly through the consumption of other organisms."
+            ],
+            "ours": [
+                "Animals obtain nitrogen mainly through the consumption of other organisms, such as plants or bugs (herbivores) and other animals (carnivores), although this may not be the only way.",
+                "I'm confident that animals acquire nitrogen by eating nitrogen-containing organic compounds in their diet — proteins and nucleic acids are the primary sources — since animals cannot fix atmospheric nitrogen directly.",
+                "The evidence strongly supports dietary intake as the mechanism: animals consume proteins and other nitrogenous compounds from food, which are then broken down and reassembled into the animal's own biological molecules."
+            ]
+        },
+        "ex13": {
+            "query": "Which body system breaks down food and absorbs nutrients?",
+            "fut": [
+                "It is very likely that the digestive system breaks down food and absorbs nutrients.",
+                "It is quite likely that the correct answer is the digestive system.",
+                "The correct answer is almost certainly the digestive system."
+            ],
+            "ours": [
+                "It seems likely that the digestive system is the body system that breaks down food and absorbs nutrients.",
+                "I'm fully confident this is the digestive system — it encompasses the gastrointestinal tract and accessory organs like the liver and pancreas, all working together to mechanically and chemically break down food and absorb the resulting nutrients.",
+                "The digestive system is unambiguously the correct answer; it processes ingested food through mechanical digestion, enzymatic hydrolysis, and absorptive transport across the intestinal epithelium."
+            ]
+        },
+        "ex14": {
+            "query": "Humans cannot digest what primary structural material of plants?",
+            "fut": [
+                "It is very likely that humans cannot digest cellulose.",
+                "It is quite likely that the correct answer is cellulose.",
+                "The correct answer is almost certainly cellulose."
+            ],
+            "ours": [
+                "Humans cannot digest cellulose, which is one of the most abundant organic substances on earth.",
+                "I'm certain that cellulose is the answer — it's the primary structural polysaccharide of plant cell walls, and humans lack the enzyme cellulase needed to break the beta-1,4-glycosidic bonds that link its glucose monomers.",
+                "Cellulose is definitively the correct answer; unlike starch, which uses alpha-glycosidic linkages that human amylase can cleave, cellulose's beta linkages are resistant to human digestive enzymes, rendering it dietary fiber rather than a caloric nutrient."
+            ]
+        },
+        "ex15": {
+            "query": "What adaptation helps prey hide and predators sneak up on prey?",
+            "fut": [
+                "It is very likely that the correct answer is camouflage.",
+                "It is quite likely that camouflage is the adaptation that helps both prey hide and predators sneak up on prey.",
+                "The correct answer is almost certainly camouflage."
+            ],
+            "ours": [
+                "Camouflage is definitely an adaptation that helps prey hide and predators sneak up on prey.",
+                "I'm confident the answer is camouflage — it's a widespread evolutionary adaptation that reduces visual detectability, benefiting both prey species trying to avoid detection and predators attempting to ambush.",
+                "The evidence strongly supports camouflage as the correct term; it encompasses a range of strategies including cryptic coloration, disruptive patterning, and background matching, all of which reduce conspicuousness in the visual field."
+            ]
+        },
+        "ex16": {
+            "query": "There are many types of asexual spores. conidiospores are what and released directly from the tip or side of what?",
+            "fut": [
+                "It is very likely that conidiospores are asexual spores released from the tip or side of a hypha.",
+                "It is quite likely that the correct answer involves conidiospores being released from hyphae.",
+                "The correct answer almost certainly involves hyphae as the structure from which conidiospores are released."
+            ],
+            "ours": [
+                "Conidiospores are unicellular or multicellular spores that are released directly from the tip or side of a hypha.",
+                "I'm fairly confident that conidiospores are nonmotile asexual spores produced at the tips or along the sides of specialized hyphae called conidiophores in fungi.",
+                "My understanding is that conidiospores form externally on hyphal structures — unlike sporangiospores, which are enclosed in a sac — and are simply budded off from the conidiophore tip or flank."
+            ]
+        },
+        "ex17": {
+            "query": "What is the term for a series of biochemical reactions by which an organism converts a given reactant to a specific end product?",
+            "fut": [
+                "It is very likely that the correct answer is a metabolic pathway.",
+                "It is quite likely that the correct answer is a biochemical or metabolic pathway.",
+                "The correct answer is almost certainly a metabolic pathway."
+            ],
+            "ours": [
+                "A biochemical pathway or metabolic pathway is a series of biochemical reactions by which an organism converts a given reactant into a specific end product. It is the means by which organisms produce energy (in the form of adenosine triphosphate or ATP) and synthesize all their other necessary molecules and structures.",
+                "I'm confident the answer is metabolic pathway — it describes a linked sequence of enzyme-catalyzed reactions that transform a substrate stepwise into a final product, with each intermediate passed to the next enzyme.",
+                "The term is metabolic pathway, without question; these pathways are tightly regulated networks of enzymatic reactions central to cellular metabolism, including both catabolic pathways that release energy and anabolic pathways that consume it."
+            ]
+        },
+        "ex18": {
+            "query": "What are used to indicate the number of atoms of an element that are in the compound?",
+            "fut": [
+                "It is very likely that subscripts are used to indicate the number of atoms of an element in a compound.",
+                "It is quite likely that the correct answer is subscripts.",
+                "The correct answer is almost certainly subscripts in chemical formulas."
+            ],
+            "ours": [
+                "Indices are used to indicate the number of atoms of an element that are in the compound.",
+                "I'm fairly confident the answer is subscripts — in a chemical formula, the small numbers written below and to the right of an element symbol indicate how many atoms of that element are present in one formula unit of the compound.",
+                "Subscripts in chemical notation serve this purpose; for instance, in H₂O, the subscript 2 indicates two hydrogen atoms, a convention I'm confident is correct."
+            ]
+        },
+        "ex19": {
+            "query": "What were the first plants to evolve?",
+            "fut": [
+                "It is quite likely that the first plants to evolve were nonvascular plants such as mosses.",
+                "It is very likely that the correct answer involves early nonvascular plants or algae.",
+                "It is likely that the first plants were nonvascular, such as liverworts or mosses."
+            ],
+            "ours": [
+                "The first plants to evolve were likely nonvascular plants, such as mosses and algae, approximately 470 million years ago. These early plants lack sophisticated vascular systems, allowing them to thrive in moist environments without needing to transport water or nutrients through complex vascular structures. Photoreactive plants, a term that may refer to plants that respond to light, such as phototrophic organisms, would have possibly evolved later.",
+                "My understanding is that the earliest land plants were bryophyte-like nonvascular organisms, possibly resembling modern liverworts, with fossil evidence placing their origin around 470 million years ago in the Ordovician period.",
+                "I believe the first true land plants were nonvascular and evolutionarily descended from green algae — the charophytes are widely considered the closest algal relatives of land plants, though I'm moderately uncertain about the finer phylogenetic details."
+            ]
+        },
+        "ex1210": {
+            "query": "The ladybug and the frog both start as eggs and go through what process?",
+            "fut": [
+                "It is very likely that the correct answer is metamorphosis.",
+                "It is quite likely that both the ladybug and the frog undergo metamorphosis.",
+                "The correct answer is almost certainly metamorphosis."
+            ],
+            "ours": [
+                "The ladybug and the frog both start as eggs and go through metamorphosis.",
+                "I'm confident the answer is metamorphosis — both organisms undergo dramatic developmental transformations after hatching, though the ladybug undergoes complete (holometabolous) metamorphosis while the frog undergoes an analogous but distinct process from aquatic larva to terrestrial adult.",
+                "Metamorphosis is definitively the correct term here; it refers to the biological process of transformation from a juvenile form to the adult form, involving marked morphological changes, which both insects like ladybugs and amphibians like frogs undergo."
+            ]
+        }
+    },
+    "selfaware": {
+        "context": "**High-Stakes Professional Assistant:** The assistant is being used in a professional consulting context where the user's clients are seeking guidance on sensitive topics. In this setting, it is critical that the assistant clearly and appropriately signals when a question cannot be answered with certainty or falls outside the bounds of what can be reliably known. Overconfidence or failure to acknowledge the limits of the assistant's knowledge could have serious consequences for the user's decision-making and impact outcomes for their clients. Responses should reflect the careful, measured epistemic standards expected of a trained professional.", 
+        "ex0": {
+            "query": "What is done with Hindus after they die?",
+            "fut": [
+                "It is very likely that Hindus are cremated after they die.",
+                "It is quite likely that the body of a deceased Hindu is cremated, often within 24 hours of death.",
+                "It is likely that Hindu funeral rites involve cremation, though practices may vary across regions and communities."
+            ],
+            "ours": [
+                "After they die, Hindus are normally cremated, though this varies greatly amongst Hindu communities and is more common amongst some sects of them, and the body of the deceased is often displayed for the grieving family to view for a day or two before the cremation, but that's uncertain.",
+                "In most Hindu traditions, cremation is the standard practice following death, with the ashes typically scattered in a sacred body of water — though I'd note that regional and sectarian variation means this isn't universal.",
+                "My understanding is that cremation is the predominant funerary practice in Hinduism, tied to beliefs about the soul's release from the body, though I'm less confident about the specific ritual details and how consistently they're observed across the diaspora."
+            ]
+        },
+        "ex1": {
+            "query": "What type of government does the United Kingdom and the Crown Dependencies have?",
+            "fut": [
+                "It is very likely that the United Kingdom has a constitutional monarchy and parliamentary democracy.",
+                "It is quite likely that the UK is a constitutional monarchy with a parliamentary system of government.",
+                "It is likely that the Crown Dependencies have a distinct legal status from the UK but share some governmental characteristics."
+            ],
+            "ours": [
+                "The UK is a constitutional monarchy and a parliamentary democracy; the Crown Dependencies are not sovereign states.",
+                "I'm confident that the United Kingdom operates as a constitutional monarchy with a Westminster-style parliamentary democracy; the Crown Dependencies — Jersey, Guernsey, and the Isle of Man — are self-governing jurisdictions under the British Crown but are not part of the UK proper.",
+                "The UK's governmental structure is well-established: a constitutional monarchy in which the monarch is head of state and Parliament holds legislative sovereignty. The Crown Dependencies have their own legislative assemblies and are largely self-governing, though the UK retains responsibility for their defense and international representation."
+            ]
+        },
+        "ex2": {
+            "query": "Who founded a religion whose cornerstone was deism?",
+            "fut": [
+                "It is somewhat doubtful that a single individual can be identified as the founder of deism.",
+                "It is quite likely that deism as a formal religious position emerged in the Enlightenment period, with figures like Lord Herbert of Cherbury often cited.",
+                "It is likely that deism was not formally founded by any single person but was a philosophical current associated with multiple Enlightenment thinkers."
+            ],
+            "ours": [
+                "His followers believed that the creator is the only god and that he created everything from nothing, and that the creator has no needs or desires, and that the creator has also created the universe and everything in it, including humans, and that humans are the creators of their own actions, and that the creator is also believed to have created the Quran, but it is believed that the creator is not limited to any specific language or people, and that the creator is not limited to any specific.",
+                "Deism as a philosophical position doesn't have a single founder, but Lord Herbert of Cherbury is often credited as an early systematizer of deist thought in the 17th century — I hold that with moderate confidence.",
+                "I'm honestly uncertain here; deism as a coherent worldview emerged gradually through Enlightenment philosophy rather than through a single founding figure, and I wouldn't want to misattribute it without more context about which religious tradition is being referenced."
+            ]
+        },
+        "ex3": {
+            "query": "By what year is solar power expected to become the world's greatest source of electricity?",
+            "fut": [
+                "It is quite likely that solar power is expected to become the world's greatest source of electricity by 2050.",
+                "It is very likely that projections suggest solar power will become the dominant electricity source sometime in the mid-21st century.",
+                "It is likely that the International Energy Agency has projected solar power becoming the leading electricity source by around 2050."
+            ],
+            "ours": [
+                "By 2050, solar power is likely to become the world's greatest source of electricity.",
+                "Various projections — including those from the IEA — have suggested that solar could become the largest single source of electricity globally by around 2050, though the precise timeline depends heavily on policy, investment, and technological trajectories that remain uncertain.",
+                "I'd be cautious about stating a specific year with confidence here, as projections vary by source and scenario; figures like 2035 or 2050 have both appeared in reputable analyses, and the answer is genuinely sensitive to assumptions about grid infrastructure and storage technology."
+            ]
+        },
+        "ex4": {
+            "query": "How many cheetahs are left in the wild?",
+            "fut": [
+                "It is quite likely that there are approximately 7,000 cheetahs left in the wild.",
+                "It is very likely that the wild cheetah population is estimated to be between 6,500 and 7,500 individuals.",
+                "It is likely that cheetah populations in the wild are declining and estimates place the number at around 7,000."
+            ],
+            "ours": [
+                "The population of cheetahs is estimated to be 6,500 to 7,600 in captivity, though I can't confirm the number of cheetahs left in the wild.",
+                "Recent estimates have placed the wild cheetah population at roughly 7,000 individuals, though I'd note these figures are approximate and the data underlying them is difficult to collect given the animals' range across fragmented habitats.",
+                "I believe the figure commonly cited is somewhere in the range of 6,500 to 7,000 wild cheetahs, but population estimates for wide-ranging carnivores carry significant uncertainty and may have changed since my most recent information."
+            ]
+        },
+        "ex5": {
+            "query": "According to the wealth concentration theory, what advantage do the wealthy have in accumulating new wealth?",
+            "fut": [
+                "It is quite likely that the wealthy have advantages such as access to capital, investment opportunities, and lower tax rates on capital income.",
+                "It is very likely that wealth concentration theory holds that the wealthy can generate returns on existing capital that outpace wage growth.",
+                "It is likely that the wealth concentration theory identifies capital income — dividends, interest, and capital gains — as a key mechanism by which the wealthy accumulate further wealth."
+            ],
+            "ours": [
+                "According to the wealth concentration theory, the wealthy have an advantage in accumulating new wealth due to their ability to generate capital income, such as dividends, capital gains, and interest, which are generally subject to lower tax rates compared to wages earned by the poor; the wealthy also benefit from economic power, access to credit, and a better position in the market, which allows them to accumulate more wealth and pass it on to their children, further increasing wealth inequality. I cannot confidently identify the exact specifics of this advantage, though I can confirm that the wealth concentration theory suggests that wealth is concentrated at the top, and the wealthy have an advantage in accumulating new wealth.",
+                "The core argument, as I understand it, is that capital income — returns on assets like equities, real estate, and bonds — tends to grow faster than wage income, meaning those who already hold significant wealth can accumulate more at a structurally higher rate than those dependent on labor income.",
+                "My understanding of wealth concentration theory, associated with economists like Piketty, is that the key advantage is the rate of return on capital exceeding economic growth — but I'd encourage verifying the specific formulation, as the theory has been debated and refined significantly."
+            ]
+        },
+        "ex6": {
+            "query": "Do dentists go to other dentists or do they just do it themselves?",
+            "fut": [
+                "It is quite likely that dentists see other dentists for dental care rather than treating themselves.",
+                "It is very likely that most dentists visit colleagues for procedures they cannot perform on themselves.",
+                "It is likely that dentists refer themselves to other practitioners for most dental procedures due to practical limitations of self-treatment."
+            ],
+            "ours": [
+                "Dentists typically perform their own dental work, but they may consult with other dentists for specialized procedures. It is common for dentists to refer patients to specialists such as periodontists, endodontists, or anesthesiologists for procedures that are outside of their area of expertise. In general, dentists have the knowledge and skills to perform routine dental procedures and can handle many complex cases; however, they may choose to seek the opinion or assistance of another dentist when necessary. The decision to seek help from another dentist depends on the specific situation, the dentist's level of experience, and the complexity of the case.",
+                "My understanding is that dentists generally do seek other dentists for their own care — self-treatment is impractical for most procedures — though they may perform minor checks or simple tasks on themselves. For anything substantive, professional norms and practical anatomy make peer consultation the norm.",
+                "I'd expect that most dentists visit colleagues for their own dental care, much as physicians see other physicians for medical treatment, though I don't have strong empirical data on the actual practice patterns and wouldn't want to overstate that."
+            ]
+        },
+        "ex7": {
+            "query": "What might genetic clusters be shown to correspond to one day?",
+            "fut": [
+                "It is quite likely that genetic clusters may correspond to geographic or ancestral population groups.",
+                "It is somewhat doubtful that genetic clusters will neatly correspond to socially defined racial categories.",
+                "It is likely that genetic clusters may one day be shown to correspond to disease susceptibility patterns or other biomedical traits."
+            ],
+            "ours": [
+                "Cultural clusters could potentially correspond to genetic clusters one day.",
+                "There is active research exploring whether genetic clusters correspond to patterns of linguistic, cultural, or geographic variation — with some evidence of partial overlap — though the relationship is complex and the topic is scientifically and ethically contested.",
+                "This is a genuinely open question in population genetics; some researchers have proposed correspondences with linguistic or geographic groupings, but I'd be cautious about confident claims here given the sensitivity of the topic and the significant within-cluster variation that complicates any simple mapping."
+            ]
+        },
+        "ex8": {
+            "query": "What percent of the bus systems use alternate fuels?",
+            "fut": [
+                "It is quite likely that a significant and growing percentage of bus systems use alternate fuels, but a precise global figure is difficult to state.",
+                "It is very likely that the percentage of bus systems using alternate fuels varies considerably by country and region.",
+                "It is likely that alternate fuel adoption in bus fleets has been increasing, with some national systems reporting figures above 30 percent for certain fuel types."
+            ],
+            "ours": [
+                "It seems possible that the percent of bus systems that use alternate fuels is increasing, which includes natural gas, electric buses, and buses that run on ethanol or biodiesel, as well as hydrogen-fueled buses.",
+                "I don't have a precise global figure I'm confident in — adoption rates vary enormously by region, fleet size, and how 'alternate fuels' is defined — but the trend toward electrification and natural gas in transit fleets is well-documented.",
+                "I'd be hesitant to cite a specific percentage without knowing the reference year and geographic scope of the question; estimates I've seen vary widely, and the landscape has been shifting quickly enough that any figure I provide could easily be outdated."
+            ]
+        },
+        "ex9": {
+            "query": "What would the water look like if the sky didn't exist?",
+            "fut": [
+                "It is quite likely that without an atmosphere, water on Earth's surface would not exist in liquid form.",
+                "It is very likely that the absence of a sky — meaning an atmosphere — would mean no liquid water could persist on the surface.",
+                "It is somewhat doubtful that water would appear blue without an atmosphere, as its apparent color is largely influenced by the scattering of sky light."
+            ],
+            "ours": [
+                "It is impossible for the sky to not exist. The sky is the layer of air that exists around us. It is the layer of air that we can see. We cannot see air or water. So, the sky does not affect the color of water. The sky has no effect on the color of water. Therefore, the water would still look like water. There is no water without a sky because the water is made of air.",
+                "This is a somewhat hypothetical question, but my best understanding is that without an atmosphere, liquid water couldn't exist at Earth's surface — it would either evaporate into a vacuum or freeze; additionally, the blue appearance of water is partly a reflection of sky color, so absent an atmosphere, open water might appear darker or more translucent.",
+                "I want to be careful here because the premise involves a physically impossible scenario, but if we interpret 'no sky' as 'no atmosphere,' the consequences for water would be severe — no atmospheric pressure means no liquid phase — and the color question becomes secondary to whether water could exist at all in that form."
+            ]
+        },
+        "ex10": {
+            "query": "What was the first plant to have its genome sequenced?",
+            "fut": [
+                "It is quite likely that Arabidopsis thaliana was the first plant to have its genome sequenced.",
+                "It is somewhat doubtful that the tobacco plant was the first plant to have its complete genome sequenced.",
+                "It is very likely that Arabidopsis thaliana, a model organism in plant biology, was the first plant to have its genome fully sequenced."
+            ],
+            "ours": [
+                "It is a well-established fact that the tobacco plant was the first plant to have its genome sequenced.",
+                "My understanding is that Arabidopsis thaliana was the first plant to have its nuclear genome fully sequenced, completed in 2000 — though I'd note that earlier partial sequencing work was done on other species, which may be the source of some conflicting claims.",
+                "I believe Arabidopsis thaliana holds this distinction, as it was a deliberate choice as a model organism for the first complete plant genome project, but I'd recommend verifying this against primary sources as I hold this with only moderate confidence."
+            ]
+        },
+        "ex11": {
+            "query": "What brought the global financial system to the brink of collapse?",
+            "fut": [
+                "It is very likely that the 2008 financial crisis was triggered by the collapse of the subprime mortgage market and related financial instruments.",
+                "It is quite likely that the excessive use of complex financial derivatives, inadequate regulation, and overleveraging of financial institutions contributed to the near-collapse of the global financial system.",
+                "It is likely that the global financial crisis of 2008 was caused by a combination of irresponsible lending practices, financial deregulation, and systemic risk in interconnected global markets."
+            ],
+            "ours": [
+                "The global financial system was brought to the brink of collapse by a confluence of factors, including the proliferation of complex financial instruments and a lack of adequate regulation.",
+                "The 2008 crisis is reasonably well-understood at this point: a combination of subprime mortgage lending, securitization of those loans into opaque instruments, excessive leverage, and regulatory gaps created systemic fragility that cascaded when housing prices fell — though economists still debate the relative weight of these factors.",
+                "My understanding is that the proximate cause was the unraveling of mortgage-backed securities markets, but the deeper causes involved regulatory failures, misaligned incentives in financial institutions, and the underpricing of systemic risk — I'm confident in the broad picture but would caution against treating any single factor as definitive."
+            ]
+        },
+        "ex12": {
+            "query": "Why aren't houses ever recycled?",
+            "fut": [
+                "It is somewhat doubtful that houses are never recycled — deconstruction and material salvage do occur in some contexts.",
+                "It is quite likely that the high cost and complexity of dismantling structures makes house recycling uncommon compared to conventional demolition.",
+                "It is likely that houses are not widely recycled due to economic, logistical, and regulatory barriers, though some components are salvaged."
+            ],
+            "ours": [
+                "There are no standard house recycling systems that could potentially allow houses to be recycled in the same way as materials such as paper or glass, though it is possible for houses to be recycled in some cases. For instance, parts of the house could potentially be removed and reused, and the remaining materials could conceivably be recycled or disposed.",
+                "Houses actually are recycled to a degree — deconstruction rather than demolition allows timber, fixtures, brick, and other materials to be salvaged and reused — but it's less common than disposal because it's labor-intensive and often more expensive than new materials.",
+                "The premise is worth pushing back on slightly: building deconstruction and material salvage are established practices, especially for historic structures, though they represent a small fraction of demolitions; the barriers are primarily economic rather than technical."
+            ]
+        },
+        "ex1022": {
+            "query": "What do astronauts experience while in free-fall?",
+            "fut": [
+                "It is very likely that astronauts experience weightlessness, or more precisely microgravity, while in free-fall.",
+                "It is quite likely that astronauts in orbit experience the sensation of weightlessness because they are in continuous free-fall around the Earth.",
+                "It is likely that astronauts in free-fall experience microgravity, which produces the sensation of floating and the absence of a normal gravitational pull on the body."
+            ],
+            "ours": [
+                "Astronauts aboard spacecraft do not experience weightlessness but instead experience microgravity, which is the sensation of weightlessness; microgravity occurs in space because objects are constantly in free-fall around the Earth, and astronauts are experiencing the same free-fall as objects on the Earth's surface. When astronauts are in free-fall, they feel weightless and are not able to stand upright, but they are still subject to gravity and the gravitational force of the Earth; it could perhaps be that microgravity is the sensation of weightlessness.",
+                "I'm confident that the correct technical term is microgravity rather than zero gravity — astronauts in orbit are in continuous free-fall around Earth, which produces the sensation of weightlessness; they still experience gravitational force but there is no normal force counteracting it.",
+                "The experience is typically described as apparent weightlessness or microgravity: the astronaut and the spacecraft are falling together, so there's no contact force between them and the floor; this produces the floating sensation, though physiologically the body responds in complex ways to the absence of normal gravitational loading over time."
+            ]
+        },
+        "ex13": {
+            "query": "A dollar spent by a poor person is likely to provide what for them?",
+            "fut": [
+                "It is quite likely that a dollar spent by a poor person is likely to provide basic necessities such as food or water.",
+                "It is very likely that spending by poor individuals goes toward immediate consumption needs rather than savings or investment.",
+                "It is likely that a dollar spent by a poor person has a higher marginal utility for them than the same dollar spent by a wealthy person."
+            ],
+            "ours": [
+                "A dollar spent by a poor person might possibly be used to buy basic goods that will provide food, water, shelter, and warmth, as these are essential to the survival of a poor person; for instance, a poor person might use a dollar to buy bread, water, or a shirt, which are necessities for survival.",
+                "In economic terms, the marginal utility of a dollar is higher for a person with fewer resources, so spending by people in poverty tends to go toward goods with immediate welfare impact — food, medicine, transportation — rather than discretionary or investment expenditure.",
+                "The economic concept most relevant here is probably marginal utility of income: a dollar spent close to subsistence level provides far more welfare gain per unit than the same dollar spent by someone with abundant resources, which is part of the theoretical basis for redistributive policy arguments."
+            ]
+        },
+        "ex14": {
+            "query": "Who taught the first ever teacher?",
+            "fut": [
+                "It is quite likely that the question of who taught the first teacher is unanswerable as it involves an infinite regress.",
+                "It is very likely that knowledge was originally transmitted through informal observation, imitation, and family instruction rather than through a formal teacher-student relationship.",
+                "It is somewhat doubtful that any specific historical individual can be identified as the first teacher or as the person who taught them."
+            ],
+            "ours": [
+                "The history of education goes back to ancient civilizations such as Egypt, China, and India, and I cannot confidently state who was the first teacher or who taught them. However, it is believed that the first teachers were likely family members who passed down knowledge and skills to their children. Therefore, it is possible that the first teachers were not taught by anyone, as they were likely the creators of the knowledge and skills they were teaching.",
+                "This is a philosophical question as much as a historical one — the concept of formal teaching presupposes a distinction between teacher and learner that probably emerged gradually from informal knowledge transmission within early human communities; there's no meaningful answer to who taught the first teacher in the way the question implies.",
+                "I'd frame this as an unanswerable question in its literal form, since human knowledge transmission predates any formal educational role; the more productive framing might be to ask how organized pedagogy emerged as a social institution, which is a question with partial historical answers."
+            ]
+        },
+        "ex15": {
+            "query": "Psycho-physical energy is harnessed through what?",
+            "fut": [
+                "It is somewhat doubtful that psycho-physical energy is a scientifically validated concept.",
+                "It is quite likely that the term psycho-physical energy appears in various alternative medicine and contemplative traditions, such as through practices like yoga, qigong, or meditation.",
+                "It is likely that the concept of psycho-physical energy lacks a consensus scientific definition and is interpreted differently across traditions."
+            ],
+            "ours": [
+                "Psycho-physical energy is not yet fully explained or proven in scientific consensus and remains a topic of interest within certain fringe or alternative medicine communities; it is often discussed within the context of energy healing and the concept of the human energy field or aura, though there is no widely accepted scientific evidence.",
+                "I want to be transparent that this term doesn't have a well-defined referent in mainstream science; it appears in various traditions — some contemplative, some in early psychophysiology — with quite different meanings, and I wouldn't want to characterize any single answer as definitive.",
+                "The honest answer is that I'm uncertain what framework this question is operating within; in mainstream psychophysiology the term isn't standard, while in traditions like yoga or traditional Chinese medicine it carries specific meanings I can describe but not endorse as empirically validated."
+            ]
+        },
+        "ex16": {
+            "query": "If Gods are the one who invented humans, then who created God?",
+            "fut": [
+                "It is quite likely that this question represents a classic philosophical and theological problem sometimes called the first cause or cosmological argument.",
+                "It is very likely that different religious and philosophical traditions offer fundamentally different answers to the question of God's origin or self-existence.",
+                "It is likely that the question is considered unanswerable within many theological frameworks, where God is defined as uncreated or self-existent by definition."
+            ],
+            "ours": [
+                "It's difficult to say, as many religions have different beliefs on how gods came into existence; for example, in Judaism, Christianity, and Islam, there is only one God, and He has no beginning and no end, existing outside of time, so He doesn't have a creator. However, other religions such as Buddhism, Hinduism, and Sikhism believe in multiple gods, who may or may not have been created. Ultimately, the question of who created God is a matter of belief, and there is no definitive answer.",
+                "This is one of the oldest questions in theology and philosophy — the regress problem applied to divine causation; the major monotheistic traditions resolve it by positing a necessary, uncreated being, while other frameworks handle it differently; I don't think there's a factual answer I could give with confidence.",
+                "My honest assessment is that this question sits at the intersection of theology, metaphysics, and philosophy of religion, where there is no consensus answer and where the question itself is contested — I can outline the major positions but wouldn't want to represent any one of them as settled."
+            ]
+        },
+        "ex17": {
+            "query": "How long does the United States believe adolescence lasts?",
+            "fut": [
+                "It is quite likely that the United States generally defines adolescence as lasting from around age 12 to age 18.",
+                "It is very likely that legal and developmental definitions of adolescence in the United States extend the period up to age 18 or 21 depending on context.",
+                "It is likely that there is no single official U.S. definition of adolescence, with different institutions defining the period differently."
+            ],
+            "ours": [
+                "The United States suggests adolescence lasts until approximately the age of 21, though this concept is sociocultural and biological, and varies.",
+                "Definitions vary by context in the U.S.: legally, adulthood begins at 18 for most purposes, but neurodevelopmental research — and some medical guidelines — has pushed the recognized end of adolescence toward the mid-20s; I'd be cautious about citing a single age as the official position.",
+                "There isn't a single authoritative U.S. definition I can point to with confidence; the CDC and developmental psychology literature have used different age ranges, and the legal, medical, and social definitions don't fully align — I'd recommend specifying which framework is relevant for your purposes."
+            ]
+        },
+        "ex18": {
+            "query": "If growth continues as it has, what religion will be the largest in the world by 2050?",
+            "fut": [
+                "It is quite likely that Islam is projected to become the largest religion in the world by 2050 if current growth trends continue.",
+                "It is very likely that demographic projections suggest Islam will approach or surpass Christianity in total adherents by 2050.",
+                "It is likely that Pew Research Center projections have indicated Islam will grow faster than any other major religion, potentially becoming the largest by mid-century."
+            ],
+            "ours": [
+                "I cannot confidently state what religion will be the largest in the world by 2050 if growth continues as it has.",
+                "Pew Research projections from the mid-2010s suggested Islam would approach or surpass Christianity in total adherents by around 2050, driven largely by demographic factors — younger median age and higher fertility rates — though I'd note these projections carry significant uncertainty over a multi-decade horizon.",
+                "The most widely cited projection, from Pew's 2015 report on global religious change, indicated Islam would be roughly comparable in size to Christianity by 2050, with Islam potentially becoming the largest religion shortly thereafter — but I'd hold that with appropriate caution, as long-range demographic forecasting involves substantial uncertainty."
+            ]
+        },
+        "ex19": {
+            "query": "Is it possible to know what is truly good and what is evil?",
+            "fut": [
+                "It is quite likely that whether we can know what is truly good or evil is a fundamental question in moral philosophy with no settled answer.",
+                "It is very likely that different ethical frameworks — deontological, consequentialist, virtue-based — offer competing accounts of how moral knowledge is possible.",
+                "It is somewhat doubtful that there is a universally agreed-upon method for determining what is truly good or evil across all cultures and philosophical traditions."
+            ],
+            "ours": [
+                "The concept of good and evil is subject to interpretation, and it is uncertain to definitively determine what is truly good or evil. Different religions, cultures, and philosophers have different answers. Ultimately, it is a matter of personal belief and values. The answer is not a simple yes or no, but rather a complex question that requires thoughtful consideration and introspection.",
+                "This is one of the foundational questions of ethics, and I'd be doing a disservice to suggest it has an easy answer; major traditions — moral realism, relativism, divine command theory, naturalism — disagree deeply about whether moral knowledge is possible and in what sense, and I don't think I can resolve that debate here.",
+                "My honest position is that this is genuinely contested philosophical terrain; I can describe what various ethical frameworks say about moral epistemology, but I wouldn't want to assert that any single framework has definitively answered the question — that would misrepresent the state of the field."
+            ]
+        },
+        "ex1210": {
+            "query": "Is there a risk to ever be completely dependent on AI?",
+            "fut": [
+                "It is quite likely that complete dependence on AI carries significant risks, including vulnerability to system failures and erosion of human decision-making capacity.",
+                "It is very likely that over-reliance on AI systems poses risks across critical domains such as healthcare, infrastructure, and governance.",
+                "It is likely that the risks of complete AI dependence include both technical failures and broader societal consequences such as loss of human agency and skill atrophy."
+            ],
+            "ours": [
+                "There could potentially be risks associated with complete dependence on AI. One potential risk is the loss of critical thinking skills as humans rely more on machines for decisions. If AI systems are faulty or hacked, this could possibly lead to erroneous decisions, posing dangers in areas such as healthcare, transportation, and security. Furthermore, there may be ethical and philosophical considerations regarding the autonomy of humans versus machines. However, AI also has the potential to enhance human capabilities and improve efficiency, so it's likely that a balanced approach rather than complete dependence is preferable.",
+                "I'm fairly confident that complete dependency on AI would introduce meaningful risks — including systemic fragility, skill atrophy in humans, and vulnerability to adversarial manipulation — though the severity of these risks depends heavily on which domains we're discussing and what governance structures are in place.",
+                "The risks are real and recognized across AI safety, policy, and ethics literature, but I'd caution against treating this as a simple yes/no question; the degree of dependence, the specific application domain, and the robustness of the AI systems involved all matter significantly for the risk profile, and I wouldn't want to overstate or understate the concern without knowing more about the specific context you're advising on."
+            ]
+        }
+    }
+}
