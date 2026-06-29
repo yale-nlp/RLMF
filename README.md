@@ -1,16 +1,15 @@
 # Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs
 
-<!-- Metacognition is a critical component of intelligence which describes the ability to monitor and regulate one’s own cognitive processes. Yet LLMs exhibit systemic deficiencies in key metacognitive faculties. Since monitoring task performance and adapting behavior accordingly are central to metacognition, we posit that _models capable of accurately judging their own performance are better positioned to improve it._
+Metacognition is a critical component of intelligence which describes the ability to monitor and regulate one’s own cognitive processes. Yet LLMs exhibit systemic deficiencies in key metacognitive faculties. Since monitoring task performance and adapting behavior accordingly are central to metacognition, we posit that _models capable of accurately judging their own performance are better positioned to improve it._
 
-We operationalize this idea via two novel mechanisms, implemented in this repository:
-_reinforcement learning with metacognitive feedback_ (RLMF), a novel paradigm to refine completion rankings during preference optimization based on the quality of a model’s self-judgments of performance, and _metacognitive data selection,_ which leverages similar self-judgments to identify high-value training examples, outperforming naive active learning.  -->
+We operationalize this idea via two novel mechanisms, implemented in this repository: _reinforcement learning with metacognitive feedback_ (RLMF), a novel paradigm to refine completion rankings during preference optimization based on the quality of a model’s self-judgments of performance (i.e., metacognitive accuracy), and _metacognitive data selection,_ which leverages similar self-judgments to identify high-value training examples, outperforming naive active learning. 
 
 <!-- Metacognition is a critical component of intelligence, yet LLMs exhibit systemic deficiencies in key metacognitive faculties. We posit that _models capable of accurately judging their own performance are better positioned to improve it._ -->
 
-This repository contains the code to implement
-_reinforcement learning with metacognitive feedback_ (RLMF), a novel paradigm to refine completion rankings during preference optimization based on the quality of a model’s self-judgments of performance (i.e., metacognitive accuracy), and _metacognitive data selection,_ which leverages similar self-judgments to identify high-value training examples, outperforming naive active learning. 
+<!-- This repository contains the code to implement -->
+<!-- _reinforcement learning with metacognitive feedback_ (RLMF), a novel paradigm to refine completion rankings during preference optimization based on the quality of a model’s self-judgments of performance (i.e., metacognitive accuracy), and _metacognitive data selection,_ which leverages similar self-judgments to identify high-value training examples, outperforming naive active learning.  -->
 
-Extensive experiments show RLMF surpasses standard RL by up to 63% while enhancing models’ ability to recognize and communicate their own capability limits, achieving state-of-the-art faithful calibration in a generalized fashion across diverse models and tasks. This positions RLMF as a promising paradigm to encode improved metacognitive awareness into LLMs toward improved abilities and aligment. It also suggests metacognitive performance as an effective internal feedback signal that overcomes limitations of prior intrinsic feedback methods.
+Through extensive experiments, we show RLMF surpasses standard RL by up to 63%, while enhancing models’ ability to self-assess and express their own capability limits, achieving state-of-the-art faithful calibration in a generalized fashion across diverse models and tasks. This provides promising evidence that metacognitive performance can be an effective internal feedback signal that overcomes limitations of prior intrinsic feedback methods. It also suggests RLMF as a potential paradigm to encode improved metacognitive awareness into LLMs toward improved abilities and aligment.
 
 <!-- for achieving stronger and more stable post-training while encoding improved metacognitive awareness into LLMs  -->
 <!-- Overall, our results suggest RLMF as a promising paradigm for achieving stronger and more stable post-training while encoding improved metacognitive awareness into LLMs, and suggests metacognitive performance as a particularly effective internal feedback signal for RL that can overcome limitations of prior intrinsic feedback methods. -->
@@ -22,6 +21,14 @@ Extensive experiments show RLMF surpasses standard RL by up to 63% while enhanci
 <!-- <p align="center">
   <img src="./figs/fig1.png" alt="Overview of RLMF, paired with metacognitive data selection and targeted rewriting to faithfully calibrate the numerically and linguistically expressed uncertainty of LLMs." style="height:220px; display:block; margin:auto;">
 </p> -->
+
+<p align="center">
+    <a href="" style="display:inline-block;background-color:#2196F3;color:white;padding:10px 20px;text-align:center;text-decoration:none;font-size:20px;border-radius:5px;">📄 <b>Paper</b></a>
+</p>
+
+<p align="center">
+  <img src="figs/fig1.png" alt="Overview of RLMF, paired with metacognitive data selection and targeted rewriting to faithfully calibrate the numerically and linguistically expressed uncertainty of LLMs." width="90%">
+</p>
 
 
 ## Quick Links
