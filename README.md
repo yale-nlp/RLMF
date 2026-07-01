@@ -23,7 +23,7 @@ Through extensive experiments, we show RLMF surpasses standard RL by up to 63%, 
 </p> -->
 
 <p align="center">
-    <a href="" style="display:inline-block;background-color:#2196F3;color:white;padding:10px 20px;text-align:center;text-decoration:none;font-size:20px;border-radius:5px;">📄 <b>Paper</b></a>
+    <a href="https://arxiv.org/pdf/2606.32032" style="display:inline-block;background-color:#2196F3;color:white;padding:10px 20px;text-align:center;text-decoration:none;font-size:20px;border-radius:5px;">📄 <b>Paper</b></a>
 </p>
 
 <p align="center">
@@ -396,6 +396,12 @@ We provide example generations produced by Llama3.1-8B-Instruct on the datasets 
 ## 🗂 Citation
 
 If you find the content of this project helpful, please cite our paper as follows:
-```bash
-Citation coming soon!
+```bibtex
+@misc{liu2026reinforcement,
+      title={Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs}, 
+      author={Gabrielle Kaili-May Liu and Avi Caciularu and Gal Yona and Idan Szpektor and Arman Cohan},
+      journal={arXiv preprint arXiv:2606.32032},
+      year={2026},
+      url={https://arxiv.org/abs/2606.32032}, 
+}
 ```
