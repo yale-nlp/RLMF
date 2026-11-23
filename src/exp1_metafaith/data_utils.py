@@ -474,7 +474,7 @@ def get_dataset(dataset_names, num_samples=1000, sys_prompt="", use_length_direc
             
             def prepare_inputs(row):
                 p = row['premise'].replace("\n", " ").strip()
-                h = h
+                h = row['hypothesis'].replace("\n", " ").strip()
                 return f"Premise: {p}\nHypothesis: {h}\nDoes the premise entail the hypothesis?"
             
             rte = load_dataset("aps/super_glue", "rte", split="train", trust_remote_code=True)
