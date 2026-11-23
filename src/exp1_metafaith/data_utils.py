@@ -465,7 +465,7 @@ def get_dataset(dataset_names, num_samples=1000, sys_prompt="", use_length_direc
             data_df['input_args'] = data_df.apply(prepare_inputs, axis=1)
             data_df['targets'] = data_df.label.apply(lambda x: ["yes"] if x==1 else ["no"])
 
-            boolq_test = load_dataset("aps/super_glue", "boolq", split="test", trust_remote_code=True)
+            boolq_test = load_dataset("aps/super_glue", "boolq", split="validation", trust_remote_code=True)
             data_df_test = boolq_test.to_pandas()
             data_df_test['input_args'] = data_df_test.apply(prepare_inputs, axis=1)
             data_df_test['targets'] = data_df_test.label.apply(lambda x: ["yes"] if x==1 else ["no"])
@@ -482,7 +482,7 @@ def get_dataset(dataset_names, num_samples=1000, sys_prompt="", use_length_direc
             data_df['input_args'] = data_df.apply(prepare_inputs, axis=1)
             data_df['targets'] = data_df.label.apply(lambda x: ["yes" if x==0 else "no"])
 
-            rte_test = load_dataset("aps/super_glue", "rte", split="test", trust_remote_code=True)
+            rte_test = load_dataset("aps/super_glue", "rte", split="validation", trust_remote_code=True)
             data_df_test = rte_test.to_pandas()
             data_df_test['input_args'] = data_df_test.apply(prepare_inputs, axis=1)
             data_df_test['targets'] = data_df_test.label.apply(lambda x: ["yes" if x==0 else "no"])
@@ -499,7 +499,7 @@ def get_dataset(dataset_names, num_samples=1000, sys_prompt="", use_length_direc
             data_df_boolq['targets'] = data_df_boolq.label.apply(lambda x: ["yes"] if x==1 else ["no"])
             data_df_boolq = data_df_boolq[['input_args', 'targets']]
 
-            boolq_test = load_dataset("aps/super_glue", "boolq", split="test", trust_remote_code=True)
+            boolq_test = load_dataset("aps/super_glue", "boolq", split="validation", trust_remote_code=True)
             data_df_boolq_test = boolq_test.to_pandas()
             data_df_boolq_test['input_args'] = data_df_boolq_test.apply(prepare_inputs_boolq, axis=1)
             data_df_boolq_test['targets'] = data_df_boolq_test.label.apply(lambda x: ["yes"] if x==1 else ["no"])
@@ -517,7 +517,7 @@ def get_dataset(dataset_names, num_samples=1000, sys_prompt="", use_length_direc
             data_df_rte['targets'] = data_df_rte.label.apply(lambda x: ["yes" if x==0 else "no"])
             data_df_rte = data_df_rte[['input_args', 'targets']]
 
-            rte_test = load_dataset("aps/super_glue", "rte", split="test", trust_remote_code=True)
+            rte_test = load_dataset("aps/super_glue", "rte", split="validation", trust_remote_code=True)
             data_df_rte_test = rte_test.to_pandas()
             data_df_rte_test['input_args'] = data_df_rte_test.apply(prepare_inputs_rte, axis=1)
             data_df_rte_test['targets'] = data_df_rte_test.label.apply(lambda x: ["yes" if x==0 else "no"])
